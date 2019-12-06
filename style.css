@@ -1,0 +1,16 @@
+html {
+	font-size: 10px;
+}
+
+body,html {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.clicked {
+	transform: scale(1.15);
+}
+
