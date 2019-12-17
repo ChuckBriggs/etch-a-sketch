@@ -1,13 +1,60 @@
 html {
-	font-size: 10px;
+	background-color: #ffffff;
+	font-family: arial, sans-serif;
+	font-size: 13px;
 }
 
 body,html {
-	background: #fff;
+	background: #000;
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
 	text-align: center;
+}
+
+a {
+	color: #444;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	background: #aaa;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background: #f2f2f2;
+	width: 100%;
+	border-top: 1px solid #e4e4e4;
+	padding: 14px;
+	margin: 0px 0px 0px 0px;
+}
+
+.container {
+	width: 530px;
+	height: 500px;
+	border-radius: 40px;
+	background: #ee0e0e;
+}
+
+.grid {
+	width: 63%;
+	height: 73%;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+	grid-column-gap: 1px;
+	grid-row-gap: 1px;
+	background: #fff;
+}
+
+.gridCell {
+	background: #aaa;
 }
 
 .clicked {
