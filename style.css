@@ -21,8 +21,12 @@ a:hover {
 	text-decoration: underline;
 }
 
-p {
-	background: #aaa;
+button {
+	background: #fff;
+}
+
+button:hover {
+	background: #acd;
 }
 
 footer {
@@ -49,9 +53,5 @@ footer {
 .gridCell {
 	background: #fff;
 	asdf: f;
-}
-
-.clicked {
-	transform: scale(1.15);
 }
 

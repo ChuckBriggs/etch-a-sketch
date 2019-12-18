@@ -34,7 +34,17 @@ function resizeGrid(newWidth) {
 	gridHeight = gridWidth;
 	gridSize = gridWidth * gridHeight;	
 	resetGrid();
-	return 0;
+}
+
+function getSize() {
+	let newSize=0;
+	while (newSize < 1 || newSize > 100 || !Number.isInteger(newSize)) {
+		newSize = prompt('enter new grid width');
+		console.log(`made it this far: ${newSize}`);
+		newSize = parseInt(newSize);
+		console.log(`then this one: ${newSize}`);
+		resizeGrid(newSize);
+	}
 }
 
 function drawCell(e) {
@@ -69,6 +79,8 @@ function drawCell(e) {
 		this.style.background = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
 	}
 }
+
+document.querySelector('#buttonResize').addEventListener('click', getSize);
 
 resetGrid();
 
