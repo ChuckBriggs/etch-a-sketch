@@ -35,16 +35,9 @@ footer {
 	margin: 0px 0px 0px 0px;
 }
 
-.container {
-	width: 530px;
+.gridContainer {
+	width: 500px;
 	height: 500px;
-	border-radius: 40px;
-	background: #ee0e0e;
-}
-
-.grid {
-	width: 63%;
-	height: 73%;
 	display: grid;
 	grid-template-columns: repeat(16, 1fr);
 	grid-template-rows: repeat(16, 1fr);
@@ -54,7 +47,8 @@ footer {
 }
 
 .gridCell {
-	background: #aaa;
+	background: #fff;
+	asdf: f;
 }
 
 .clicked {
