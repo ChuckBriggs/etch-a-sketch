@@ -1,5 +1,5 @@
 // set grid defaults
-let gridWidth = 4;
+let gridWidth = 16;
 let gridHeight = gridWidth;
 let gridSize = gridWidth * gridHeight;
 let currentColor = 'paletteBlack';
@@ -40,30 +40,29 @@ function resizeGrid(newWidth) {
 function drawCell(e) {
 	if (currentColor == 'paletteBlack') {
 		this.style.background = '#000';
-		/*
 	} else if (currentColor == 'paletteGrey') {
-		if (this.style.asdf == 'f') {
-			this.style.background = '#555';
-			this.style.asdf = '5';
-		}
-		if (this.style.background == '#fff') {
-			this.style.background = '#abc';
-		} else if (this.style.background == '#ddd') {
-			this.style.background = '#bbb';
-		} else if (this.style.background == '#bbb') {
-			this.style.background = '#999';
-		} else if (this.style.background == '#999') {
-			this.style.background = '#777';
-		} else if (this.style.background == '#777') {
-			this.style.background = '#555';
-		} else if (this.style.background == '#555') {
-			this.style.background = '#333';
-		} else if (this.style.background == '#333') {
-			this.style.background = '#111';
-		} else if (this.style.background == '#111') {
+		if (!this.style.opacity) {
 			this.style.background = '#000';
+			this.style.opacity = '0.1';
+		} else if (this.style.opacity == '0.1') {
+			this.style.opacity = '0.2';
+		} else if (this.style.opacity == '0.2') {
+			this.style.opacity = '0.3';
+		} else if (this.style.opacity == '0.3') {
+			this.style.opacity = '0.4';
+		} else if (this.style.opacity == '0.4') {
+			this.style.opacity = '0.5';
+		} else if (this.style.opacity == '0.5') {
+			this.style.opacity = '0.6';
+		} else if (this.style.opacity == '0.6') {
+			this.style.opacity = '0.7';
+		} else if (this.style.opacity == '0.7') {
+			this.style.opacity = '0.8';
+		} else if (this.style.opacity == '0.8') {
+			this.style.opacity = '0.9';
+		} else if (this.style.opacity == '0.9') {
+			this.style.opacity = '1.0';
 		}
-		*/
 	} else if (currentColor == 'paletteRandom') {
 		// random color generating code shamelessly pilfered from here:
 		// https://stackoverflow.com/questions/1484506/random-color-generator#comment75605597_1484514
