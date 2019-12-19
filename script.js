@@ -2,7 +2,7 @@
 let gridWidth = 16;
 let gridHeight = gridWidth;
 let gridSize = gridWidth * gridHeight;
-let currentColor = 'paletteBlack';
+let currentColor = 'black';
 
 const gridContainer = document.querySelector(".gridContainer");
 
@@ -39,49 +39,54 @@ function resizeGrid(newWidth) {
 function getSize() {
 	let newSize=0;
 	while (newSize < 1 || newSize > 100 || !Number.isInteger(newSize)) {
-		newSize = prompt('enter new grid width');
-		console.log(`made it this far: ${newSize}`);
+		newSize = prompt('enter new grid width from 1 to 100.');
 		newSize = parseInt(newSize);
-		console.log(`then this one: ${newSize}`);
 		resizeGrid(newSize);
 	}
 }
 
 function drawCell(e) {
-	if (currentColor == 'paletteBlack') {
-		this.style.background = '#000';
-	} else if (currentColor == 'paletteGrey') {
-		if (!this.style.opacity) {
+	switch (paletteSelector.value) {
+		//if (currentColor == 'black') {
+		case 'black':
 			this.style.background = '#000';
-			this.style.opacity = '0.1';
-		} else if (this.style.opacity == '0.1') {
-			this.style.opacity = '0.2';
-		} else if (this.style.opacity == '0.2') {
-			this.style.opacity = '0.3';
-		} else if (this.style.opacity == '0.3') {
-			this.style.opacity = '0.4';
-		} else if (this.style.opacity == '0.4') {
-			this.style.opacity = '0.5';
-		} else if (this.style.opacity == '0.5') {
-			this.style.opacity = '0.6';
-		} else if (this.style.opacity == '0.6') {
-			this.style.opacity = '0.7';
-		} else if (this.style.opacity == '0.7') {
-			this.style.opacity = '0.8';
-		} else if (this.style.opacity == '0.8') {
-			this.style.opacity = '0.9';
-		} else if (this.style.opacity == '0.9') {
-			this.style.opacity = '1.0';
-		}
-	} else if (currentColor == 'paletteRandom') {
-		// random color generating code shamelessly pilfered from here:
-		// https://stackoverflow.com/questions/1484506/random-color-generator#comment75605597_1484514
-		this.style.background = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
+			break;
+		//} else if (currentColor == 'grey') {
+		case 'grey':
+			if (!this.style.opacity) {
+				this.style.background = '#000';
+				this.style.opacity = '0.1';
+			} else if (this.style.opacity == '0.1') {
+				this.style.opacity = '0.2';
+			} else if (this.style.opacity == '0.2') {
+				this.style.opacity = '0.3';
+			} else if (this.style.opacity == '0.3') {
+				this.style.opacity = '0.4';
+			} else if (this.style.opacity == '0.4') {
+				this.style.opacity = '0.5';
+			} else if (this.style.opacity == '0.5') {
+				this.style.opacity = '0.6';
+			} else if (this.style.opacity == '0.6') {
+				this.style.opacity = '0.7';
+			} else if (this.style.opacity == '0.7') {
+				this.style.opacity = '0.8';
+			} else if (this.style.opacity == '0.8') {
+				this.style.opacity = '0.9';
+			} else if (this.style.opacity == '0.9') {
+				this.style.opacity = '1.0';
+			}
+			break;
+		//} else if (currentColor == 'random') {
+		case 'random':
+			// random color generating code shamelessly pilfered from here:
+			// https://stackoverflow.com/questions/1484506/random-color-generator#comment75605597_1484514
+			this.style.background = `#${Math.floor(Math.random() * 16777216).toString(16)}`;
+			break;
 	}
 }
 
-document.querySelector('#buttonResize').addEventListener('click', getSize);
+document.querySelector('#btnResize').addEventListener('click', getSize);
+document.querySelector('#btnClear').addEventListener('click', resetGrid);
 
 resetGrid();
-
 

@@ -7,15 +7,23 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<button id='buttonResize'>resize</button>
-		<button>clear</button>
-		<button>some button to change brushes</button>
+		<h1>Scratch-a-Doodle</h1>
+		<div id='controls'>
+			<button type='reset' id='btnResize'>resize</button>
+			<button type='button' id='btnClear'>clear</button>
+			<select id='paletteSelector'>
+				<option value='black'>Black</option>
+				<option value='grey'>Darken</option>
+				<option value='random'>Random</option>
+			</select>
+		</div>
 		<div class='gridContainer'></div>
 	</body>
 	<footer>
 		Made by <a href="https://github.com/ChuckBriggs" target="_blank">Charles Briggs</a>
-		for
-		<a href="https://www.theodinproject.com/lessons/etch-a-sketch-project" target="_blank">The Odin Project</a>.
+		as part of The 
+		<a href="https://www.theodinproject.com/lessons/etch-a-sketch-project" target="_blank">Odin Project</a>
+		 curriculum.
 	</footer>
 	<script type="text/javascript" src="script.js"></script>
 </html>
